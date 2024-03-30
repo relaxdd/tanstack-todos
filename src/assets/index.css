@@ -1,0 +1,62 @@
+#root {
+  padding: 1.25rem 0;
+}
+
+.todo-section {
+  margin-bottom: 1rem;
+}
+
+.todo-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-section-header > h4 {
+  margin: 0;
+}
+
+.todo-section-content {
+  display: none;
+  overflow: hidden;
+  padding-top: 1rem;
+  /*transition: max-height .3s ease-out;*/
+}
+
+.todo-section[data-visible] .todo-section-header > svg {
+  transform: rotate(180deg);
+}
+
+.todo-section[data-visible] .todo-section-content {
+  display: block;
+}
+
+.todos-delete-btn {
+  visibility: hidden;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.list-group-item:hover .todos-delete-btn {
+  visibility: visible;
+}
+
+.todos-delete-btn:hover {
+  opacity: .7;
+}
+
+.btn-reset {
+  display: inline-flex;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-reset:disabled {
+  display: none;
+}
